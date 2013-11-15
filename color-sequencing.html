@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+	<link rel="stylesheet" type="text/css" href="styles/yui.css" />
+    <link rel="stylesheet" type="text/css" href="styles/color-sequencing.css" />
+    <title>Color Sequencing Dialog:</title>
+</head>
+
+<body>
+
+<h1>Color Sequencing Dialog</h1>
+
+<p>This color sequencing widget was developed as a proof of concept to reorder large numbers of content blocks inside a YUI dialog box, specifically testing using the YUI 3 DragDrop library inside a YUI 2.7 application.</p>
+
+<p><a href="#" id="colorway-link">Click here to open the sequencing dialog box.</a></p>
+
+<div id="colorway-dialog-box" class="hidden">
+    <div class="bd">
+        <p><strong>Move one color:</strong>  Click and drag to move a color into its desired location.</p>
+		<p><strong>Multiple colors:</strong> Hold down the Shift key, click to select more than 1 color, and drag selection.</p>
+		
+		<div id="colorway-control-panel">
+			Automated tool buttons can go here.
+		</div>
+		
+		<div id="colorway-main-container">
+			<div class="colorway d01">Item #1</div>
+			<div class="colorway d02">Item #2</div>
+			<div class="colorway d03">Item #3</div>
+			<div class="colorway d04">Item #4</div>
+			<div class="colorway d05">Item #5</div> 
+			<div class="colorway d06">Item #6</div>
+			<div class="colorway d07">Item #7</div>
+			<div class="colorway d08">Item #8</div>
+			<div class="colorway d09">Item #9</div>
+			<div class="colorway d10">Item #10</div>
+			
+			<div class="colorway d11">Item #11</div>
+			<div class="colorway d12">Item #12</div>
+			<div class="colorway d13">Item #13</div>
+			<div class="colorway d14">Item #14</div>
+			<div class="colorway d15">Item #15</div>
+			<div class="colorway d16">Item #16</div>
+			<div class="colorway d17">Item #17</div>
+			<div class="colorway d18">Item #18</div>
+			<div class="colorway d19">Item #19</div>
+			<div class="colorway d20">Item #20</div>
+			
+			<div class="colorway d21">Item #21</div>
+			<div class="colorway d22">Item #22</div>
+			<div class="colorway d23">Item #23</div>
+			<div class="colorway d24">Item #24</div>
+			<div class="colorway d25">Item #25</div>
+			<div class="colorway d26">Item #26</div>
+			<div class="colorway d27">Item #27</div>
+			<div class="colorway d28">Item #28</div>
+			<div class="colorway d29">Item #29</div>
+			<div class="colorway d30">Item #30</div>
+			<br />
+		</div>
+		
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/yui/2.7.0/yahoo-dom-event/yahoo-dom-event.js"></script> 
+<script type="text/javascript" src="scripts/yui/2.7.0/element/element-min.js"></script>
+<script type="text/javascript" src="scripts/yui/2.7.0/selector/selector-min.js"></script>
+<script type="text/javascript" src="scripts/yui/2.7.0/container/container-min.js"></script>
+<script type="text/javascript" src="scripts/yui/2.7.0/utilities/utilities.js"></script> 
+<script type="text/javascript" src="scripts/yui/3.3.0/yui-min.js"></script>
+<script type="text/javascript" src="scripts/yui/3.3.0/dd/dd.js"></script>
+
+<script type="text/javascript" src="scripts/color-sequencing.js"></script>
+
+</body>
+</html>

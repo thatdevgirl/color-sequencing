@@ -1,0 +1,546 @@
+/*Copyright (c) 2007,Yahoo! Inc. All rights reserved.Code licensed under the BSD License:http://developer.yahoo.net/yui/license.txtversion:2.3.1*/
+body{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup,sub{line-height:-1px;vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+body{font:13px/1.22 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small}
+table{font-size:inherit;font:100%}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:99%}
+#ft{clear:both}
+#doc,#doc2,#doc3,#doc4,.yui-t1,.yui-t2,.yui-t3,.yui-t4,.yui-t5,.yui-t6,.yui-t7{margin:auto;text-align:left;width:57.69em;*width:56.301em;min-width:750px}
+#doc2{width:73.074em;*width:71.313em}
+#doc3{margin:auto 0px;width:auto}
+#doc4{width:74.923em;*width:73.117em}
+.yui-b{position:relative}
+.yui-b{_position:static}
+#yui-main .yui-b{position:static}
+#yui-main{width:100%}
+.yui-t1 #yui-main,.yui-t2 #yui-main,.yui-t3 #yui-main{float:right;margin-left:-25em}
+.yui-t4 #yui-main,.yui-t5 #yui-main,.yui-t6 #yui-main{float:left;margin-right:-25em}
+.yui-t1 .yui-b{float:left;width:12.3207em;*width:12.0106em}
+.yui-t1 #yui-main .yui-b{margin-left:13.3207em;*margin-left:13.0106em}
+.yui-t2 .yui-b{float:left;width:13.8456em;*width:13.512em}
+.yui-t2 #yui-main .yui-b{margin-left:14.8456em;*margin-left:14.512em}
+.yui-t3 .yui-b{float:left;width:23.0759em;*width:22.52em}
+.yui-t3 #yui-main .yui-b{margin-left:24.0759em;*margin-left:23.52em}
+.yui-t4 .yui-b{float:right;width:13.8456em;*width:13.512em}
+.yui-t4 #yui-main .yui-b{margin-right:14.8456em;*margin-right:14.512em}
+.yui-t5 .yui-b{float:right;width:18.4608em;*width:18.016em}
+.yui-t5 #yui-main .yui-b{margin-right:19.4608em;*margin-right:19.016em}
+.yui-t6 .yui-b{float:right;width:23.0759em;*width:22.52em}
+.yui-t6 #yui-main .yui-b{margin-right:24.0759em;*margin-right:23.52em}
+.yui-t7 #yui-main .yui-b{display:block;margin:0 0 1em 0}
+#yui-main .yui-b{float:none;width:auto}
+.yui-g .yui-gb .yui-u,.yui-gb .yui-g,.yui-gb .yui-gb,.yui-gb .yui-gc,.yui-gb .yui-gd,.yui-gb .yui-ge,.yui-gb .yui-gf,.yui-gb .yui-u,.yui-gc .yui-u,.yui-gc .yui-g,.yui-gd .yui-u{float:left;margin-left:2%;width:32%}
+.yui-gb .yui-gb .yui-u,.yui-gb .yui-gc .yui-u{*margin-left:1.8%;_margin-left:4%}
+.yui-g .yui-gb .yui-u{_margin-left:.8%}
+.yui-gb .yui-u{float:right}
+.yui-gb div.first{margin-left:0;float:left}
+.yui-g .yui-gb div.first,.yui-gb .yui-gb div.first{*margin-right:0;*width:32%;_width:31.7%}
+.yui-gb .yui-gc div.first,.yui-gb .yui-gd div.first{*margin-right:0}
+.yui-gb .yui-gd .yui-u{*width:66%;_width:61.2%}
+.yui-gb .yui-gd div.first{*width:31%;_width:29.5%}
+.yui-g .yui-gc .yui-u,.yui-gb .yui-gc .yui-u{width:32%;_float:right;margin-right:0;_margin-left:0}
+.yui-gb .yui-gc div.first{width:66%;*float:left;*margin-left:0}
+.yui-gb .yui-ge .yui-u,.yui-gb .yui-gf .yui-u{margin:0}
+.yui-g .yui-u,.yui-g .yui-g,.yui-g .yui-gb,.yui-g .yui-gc,.yui-g .yui-gd,.yui-g .yui-ge,.yui-g .yui-gf,.yui-gc .yui-u,.yui-gd .yui-g,.yui-g .yui-gc .yui-u,.yui-ge .yui-u,.yui-ge .yui-g,.yui-gf .yui-g,.yui-gf .yui-u{float:right}
+.yui-g .yui-gc div.first,.yui-g .yui-ge div.first,.yui-g div.first,.yui-gc div.first,.yui-gc div.first div.first,.yui-gd div.first,.yui-ge div.first,.yui-gf div.first{float:left}
+.yui-g .yui-g .yui-u,.yui-gb .yui-g .yui-u,.yui-gc .yui-g .yui-u,.yui-gd .yui-g .yui-u,.yui-ge .yui-g .yui-u,.yui-gf .yui-g .yui-u{width:49%;*width:48.1%;*margin-left:0}
+.yui-g .yui-g div.first{*margin:0}
+.yui-gb .yui-g div.first{*margin-right:4%;_margin-right:1.3%}
+.yui-gb .yui-gb .yui-u{_margin-left:.7%}
+.yui-gb .yui-g div.first,.yui-gb .yui-gb div.first{*margin-left:0}
+.yui-gc .yui-g .yui-u,.yui-gd .yui-g .yui-u{*width:48.1%;*margin-left:0}
+.yui-g .yui-u,.yui-g .yui-g,.yui-g .yui-gb,.yui-g .yui-gc,.yui-g .yui-gd,.yui-g .yui-ge,.yui-g .yui-gf{width:49.1%}
+.yui-g .yui-gb div.first,.yui-gb div.first,.yui-gc div.first,.yui-gd div.first{margin-left:0}
+.yui-g .yui-gc div.first,.yui-gc div.first,.yui-gd .yui-g,.yui-gd .yui-u{width:66%}
+.yui-gd div.first,.yui-gb .yui-gd div.first{width:32%}
+.yui-g .yui-gd div.first{_width:29.9%}
+.yui-ge .yui-u,.yui-ge .yui-g,.yui-gf div.first{width:24%}
+.yui-gb .yui-ge div.yui-u,.yui-gb .yui-gf div.yui-u{float:right}
+.yui-gb .yui-ge div.first,.yui-gb .yui-gf div.first{float:left}
+.yui-ge div.first,.yui-gf .yui-g,.yui-gf .yui-u{width:74.2%}
+.yui-gb .yui-ge .yui-u,.yui-gb .yui-gf div.first{*width:24%;_width:20%}
+.yui-gb .yui-ge div.first,.yui-gb .yui-gf .yui-u{*width:73.5%;_width:65.5%}
+#bd:after,.yui-g:after,.yui-gb:after,.yui-gc:after,.yui-gd:after,.yui-ge:after,.yui-gf:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+#bd,.yui-g,.yui-gb,.yui-gc,.yui-gd,.yui-ge,.yui-gf{zoom:1}
+.yui-gb .yui-u{float:left}
+.yui-overlay,.yui-panel-container{visibility:hidden;position:absolute;z-index:2}
+.yui-tt{visibility:hidden;position:absolute;color:#333;background-color:#FDFFB4;padding:3px 5px;border:1px solid #FCC90D;font:100% sans-serif;width:auto}
+.yui-tt-shadow{display:none}
+.mask{z-index:1;display:none;position:absolute;top:0;left:0;background-color:#000;opacity:.25;*filter:alpha(opacity=25)}
+.hide-scrollbars {overflow:hidden}
+.hide-scrollbars select{display:none}
+.show-scrollbars{overflow:auto}
+.yui-panel-container.show-scrollbars{overflow:visible}
+.yui-panel-container.show-scrollbars .underlay{overflow:auto}
+.yui-panel-container .underlay{position:absolute;top:0;right:0;bottom:0;left:0}
+.yui-panel-container.matte{padding:3px;background-color:#fff}
+.yui-panel-container.shadow .underlay{top:3px;bottom:-3px;right:-3px;left:3px;background-color:#000;opacity:.12;filter:alpha(opacity=12)}
+.yui-panel-container.shadow .underlay.yui-force-redraw{padding-bottom:1px}
+.yui-effect-fade .underlay{display:none}
+.yui-panel{visibility:hidden;border-collapse:separate;position:relative;left:0;top:0;background-color:#FFF;border:1px solid #929292;z-index:1;overflow:hidden}
+.yui-panel .hd{padding:0 10px;font-size:77%;text-transform:uppercase;font-weight:bold;color:#ffffff;background:#929292;line-height:2em;border-bottom:2px solid #767676}
+.yui-panel .bd{overflow:hidden;padding:10px;font-size:85%;white-space: normal}
+.yui-panel .bd p{margin:0 0 1em}
+.yui-panel .container-close{position:absolute;top:5px;right:4px;z-index:6;height:9px;width:9px;margin:0px;overflow:hidden;text-indent:-10000em;overflow:hidden;background:transparent url(../Graphics/Main/dialogclose.gif) no-repeat;cursor:pointer;visibility:inherit}
+.yui-panel .ft{padding:4px;overflow:hidden}
+.yui-simple-dialog .bd .yui-icon{background-repeat:no-repeat;width:16px;height:16px;margin-right:10px;float:left}
+.yui-simple-dialog .bd span.blckicon{background:url(../Javascript/yui/2.7.0/container/assets/blck16_1.gif) no-repeat}
+.yui-simple-dialog .bd span.alrticon{background:url(../Javascript/yui/2.7.0/container/assets/alrt16_1.gif) no-repeat}
+.yui-simple-dialog .bd span.hlpicon{background:url(../Javascript/yui/2.7.0/container/assets/hlp16_1.gif) no-repeat}
+.yui-simple-dialog .bd span.infoicon{background:url(../Javascript/yui/2.7.0/container/assets/info16_1.gif) no-repeat}
+.yui-simple-dialog .bd span.warnicon{background:url(../Javascript/yui/2.7.0/container/assets/warn16_1.gif) no-repeat}
+.yui-simple-dialog .bd span.tipicon{background:url(../Javascript/yui/2.7.0/container/assets/tip16_1.gif) no-repeat}
+.yui-dialog .ft,.yui-simple-dialog .ft{padding-bottom:5px;padding-right:5px;text-align:right}
+.yui-dialog form,.yui-simple-dialog form{margin:0}
+.yui-button button{background-color:transparent;cursor:pointer}
+.yui-button button,.yui-button a{border:medium none;margin:0pt}
+.button-group button{font:100 76% verdana;text-decoration:none;background-color:#E4E4E4;color:#333;cursor:hand;vertical-align:middle;margin:0.3em;padding:0.3em}
+.button-group button.default{font-weight:bold}
+p#clear{clear:left;padding-top:10px}
+.yui-ac{position:relative;font-size:100%}
+.yui-ac-input{}
+.yui-ac-container{position:absolute}
+.yui-ac-content{position:absolute;width:100%;border:1px solid #808080;background:#fff;overflow:hidden;z-index:9050}
+.yui-ac-shadow{position:absolute;margin:.3em;width:100%;background:#000;-moz-opacity:0.10;opacity:.10;filter:alpha(opacity=10);z-index:9049}
+.yui-ac-content ul{margin:0;padding:0;width:100%}
+.yui-ac-content li{margin:0;padding:2px 5px;cursor:default}
+.yui-ac-content li.yui-ac-prehighlight{background:#B3D4FF}
+.yui-ac-content li.yui-ac-highlight{background:#426FD9;color:#FFF;cursor:pointer}
+.yui-navset .yui-nav li{margin-right:0.5em}
+.yui-navset-left .yui-nav li,.yui-navset-right .yui-nav li{margin:0 0 0.5em}
+.yui-navset-left .yui-nav,.yui-navset-right .yui-nav{width:6em}
+.yui-navset-left{padding-left:6em}
+.yui-navset-right{padding-right:6em}
+.yui-nav,.yui-nav li{margin:0;padding:0;list-style:none}
+.yui-navset li em{font-style:normal}
+.yui-navset{position:relative;zoom:1}
+.yui-navset .yui-content{zoom:1}
+.yui-navset .yui-content .yui-hidden{display:none;}
+.yui-navset .yui-nav li{display:inline-block;display:-moz-inline-stack;*display:inline;vertical-align:bottom;cursor:pointer;zoom:1}
+.yui-navset-left .yui-nav li,.yui-navset-right .yui-nav li{display:block}
+.yui-navset .yui-nav a{outline:0}
+.yui-navset .yui-nav a{position:relative}
+.yui-navset .yui-nav li a{display:block;display:inline-block;vertical-align:bottom;zoom:1}
+.yui-navset-left .yui-nav li a,.yui-navset-right .yui-nav li a{display:block}
+.yui-navset-bottom .yui-nav li a{vertical-align:text-top}
+.yui-navset .yui-nav li a em{display:block}
+.yui-navset-left .yui-nav,.yui-navset-right .yui-nav{position:absolute;z-index:1}
+.yui-navset-left .yui-nav{left:0}
+.yui-navset-right .yui-nav{right:0}
+/* =Menubar---------------------*/.yuimenubar{visibility:visible;position:static;font-size:1em;line-height:1.9;border:none;background:none}
+.yuimenu .yuimenu,.yuimenubar .yuimenu{visibility:hidden;position:absolute;top:-10000px;left:-10000px}
+.yuimenubar li,.yuimenu li{list-style-type:none}
+.yuimenubar ul,.yuimenu ul,.yuimenubar li,.yuimenu li,.yuimenu h6,.yuimenubar h6{margin:0;padding:0}
+.yuimenuitemlabel,.yuimenubaritemlabel{text-align:left;white-space:nowrap}
+.yuimenubar ul{zoom:1}
+.yuimenubar .yuimenu ul{zoom:normal}
+.yuimenubar>.bd>ul:after{content:".";display:block;clear:both;visibility:hidden;height:0;line-height:0}
+.yuimenubaritem{float:left}
+.yuimenubaritemlabel,.yuimenuitemlabel{display:block}
+.yuimenuitemlabel .helptext{font-style:normal;display:block;margin:-1.45em 0 0 10em}
+.yui-menu-shadow{position:absolute;visibility:hidden;z-index:-1}
+.yui-menu-shadow-visible{top:2px;right:-3px;left:-3px;bottom:-3px;visibility:visible;background-color:#000;opacity:.12;filter:alpha(opacity=12)}
+.hide-scrollbars select{display:none}
+.yuimenu.show-scrollbars,.yuimenubar.show-scrollbars{overflow:visible}
+.yuimenu.show-scrollbars .yui-menu-shadow,.yuimenubar.show-scrollbars .yui-menu-shadow{overflow:auto}
+.yuimenubar{font-size:93%;line-height:1.9;border:solid 1px gray;background:url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) repeat-x 0 0}
+.yuimenubarnav .yuimenubaritem{border-right:solid 1px #ccc}
+.yuimenubaritemlabel{color:#000;text-decoration:none;cursor:default;position:relative;border-color:gray;border-style:solid;border-width:1px 0;margin:-1px 0;padding:0 10px}
+.yuimenubarnav .yuimenubaritemlabel{padding-right:20px;display:inline-block}
+.yuimenubaritem-selected{background:url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) repeat-x 0 -1700px}
+.yuimenubarnav .yuimenubaritemlabel-selected{border-left-width:1px;margin-left:-1px;left:-1px}
+.yuimenu{font-size:93%;line-height:1.45}
+.yuimenubar .yuimenu,.yuimenu .yuimenu{font-size:100%}
+.yuimenu .bd{border:solid 1px gray;background-color:#fff}
+.yuimenu ul{border-color:#ccc;border-style:solid;border-width:1px 0 0;padding:3px 0}
+.yuimenuitemlabel{color:#000;text-decoration:none;cursor:default;padding:0 20px}
+.yuimenuitemlabel .helptext{margin-top:-1.45em}
+.yui-menu-shadow-visible{background-color:#000;opacity:.12;filter:alpha(opacity=12)}
+.yuimenuitem-selected{background-color:#B3D4FF}
+.yuimenubarnav .yuimenubaritem{width:auto;border-right:none}
+.yuimenubaritemlabel{color:#000;text-decoration:none;cursor:pointer;border:none;position:relative;margin:0;padding:0}
+.yuimenubarnav .yuimenubaritemlabel{padding-right:0;display:inline-block}
+.yuimenubaritem-selected{background:none}
+.yuimenubarnav .yuimenubaritemlabel-selected{border-left-width:1px;margin-left:0;left:0}
+.yuimenu{font-size:1em;line-height:1.7em}
+#header .yuimenu .bd {border:1px solid #a6a6a6;border-top:none;background-color:#fff;width:13em}
+.yuimenu .bd .bd{border-top:1px solid #a6a6a6}
+.yuimenu ul{border:none;padding:3px 0}
+.yuimenuitemlabel{color:#000;text-decoration:none;cursor:pointer;padding:3px 10px}
+.yuimenuitem-selected{background-color:#ebeae9}
+.yuimenu.hide-scrollbars .yui-menu-shadow,.yuimenubar.hide-scrollbars .yui-menu-shadow{overflow:hidden}
+.yuimenubarnav .yuimenubaritemlabel-hassubmenu,.yuimenubarnav .yuimenubaritemlabel-hassubmenu{background:url(menubaritem_submenuindicator.png) right center no-repeat}
+.yuimenubaritemlabel-selected,.yuimenubaritemlabel-selected{border-color:#7D98B8}
+.yuimenubaritemlabel-disabled,.yuimenuitemlabel-disabled,.yuimenubaritemlabel-disabled,.yuimenuitemlabel-disabled{cursor:default;color:#A6A6A6}
+.yuimenubarnav .yuimenubaritemlabel-hassubmenu-disabled,.yuimenubarnav .yuimenubaritemlabel-hassubmenu-disabled{background-image:url(menubaritem_submenuindicator_disabled.png)}
+.yuimenu ul.first-of-type,.yuimenu ul.hastitle,.yuimenu h6.first-of-type,.yuimenu ul.first-of-type,.yuimenu ul.hastitle,.yuimenu h6.first-of-type{border-width:0}
+.yuimenu h6,.yuimenu h6{font-weight:700;color:#a4a4a4;border-color:#ccc;border-style:solid;border-width:1px 0 0;padding:3px 10px 0}
+.yuimenu .yui-menu-body-scrolled,.yuimenu .yui-menu-body-scrolled{overflow:hidden;border-color:#ccc gray}
+.yuimenu .topscrollbar,.yuimenu .bottomscrollbar,.yuimenu .topscrollbar,.yuimenu .bottomscrollbar{height:16px;border:solid 1px gray;background:#fff url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) no-repeat 0 0}
+.yuimenu .topscrollbar,.yuimenu .topscrollbar{border-bottom-width:0;background-position:center -950px}
+.yuimenu .topscrollbar_disabled,.yuimenu .topscrollbar_disabled{background-position:center -975px}
+.yuimenu .bottomscrollbar,.yuimenu .bottomscrollbar{border-top-width:0;background-position:center -850px}
+.yuimenu .bottomscrollbar_disabled,.yuimenu .bottomscrollbar_disabled{background-position:center -875px}
+.yuimenuitem,.yuimenuitem{_border-bottom:solid 1px #fff}
+.yuimenuitem-hassubmenu,.yuimenuitem-hassubmenu{background-image:url(menuitem_submenuindicator.png);background-position:right center;background-repeat:no-repeat}
+.yuimenuitem-checked,.yuimenuitem-checked{background-image:url(menuitem_checkbox.png);background-position:left center;background-repeat:no-repeat}
+.yuimenuitem-hassubmenu-disabled,.yuimenuitem-hassubmenu-disabled{background-image:url(menuitem_submenuindicator_disabled.png)}
+.yuimenuitem-checked-disabled,.yuimenuitem-checked-disabled{background-image:url(menuitem_checkbox_disabled.png)}
+
+/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+.yui-carousel {
+    visibility: hidden;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    zoom: 1;
+}
+
+.yui-carousel.yui-carousel-visible {
+    visibility: visible;
+}
+
+.yui-carousel-content {
+    overflow: hidden;
+    position: relative;
+	width: 47em;
+}
+
+.yui-carousel-element {
+    margin: 5px 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 32000px;
+    z-index: 1;
+}
+
+.yui-carousel-vertical .yui-carousel-element {
+    margin: 0 5px;
+}
+
+.yui-carousel-element li {
+    border: 1px solid #ccc;
+    float: left;
+    list-style: none;
+    margin: 1px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    /* IE 6 & 7 fix - prevent DOM scroll for focussed elements. */
+   *float: none;
+   *display: inline-block;
+   *zoom: 1;
+   *display: inline;
+}
+
+.yui-carousel .yui-carousel-item-selected {
+    border: 1px dashed #000;
+    margin: 1px;
+}
+
+.yui-carousel-vertical {
+    height: 32000px;
+    margin: 0 5px;
+    width: auto;
+}
+
+.yui-carousel-vertical .yui-carousel-element li {
+    display: block;
+    float: none;
+}
+
+.yui-log .carousel {
+    background: #f2e886;
+}
+
+.yui-carousel-nav {
+    zoom: 1;
+}
+
+.yui-carousel-nav:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.yui-carousel-button-focus {
+    outline: 1px dotted #000;
+}
+
+.yui-carousel-min-width .yui-carousel-content {
+    margin: 0 auto;
+}
+
+/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+.yui-carousel,
+.yui-carousel-vertical {
+    border: 1px solid #808080;
+}
+
+.yui-carousel-nav {
+    background: url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) repeat-x 0 0;
+    padding: 3px;
+    text-align: right;
+}
+
+.yui-carousel-button {
+    background: url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) no-repeat 0 -600px;
+    float: right;
+    height: 19px;
+    margin: 5px;
+    overflow: hidden;
+    width: 40px;
+}
+
+.yui-carousel-vertical .yui-carousel-button {
+    background-position: 0 -800px;
+}
+
+.yui-carousel-button-disabled {
+    background-position: 0 -2000px;
+}
+
+.yui-carousel-vertical .yui-carousel-button-disabled {
+    background-position: 0 -2100px;
+}
+
+.yui-carousel-button input,
+.yui-carousel-button button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 44px;
+    margin: -2px 0 0 -2px;
+    padding: 0 0 0 50px;
+}
+
+span.yui-carousel-first-button {
+    background-position: 0px -550px;
+    margin-left: -100px;
+    margin-right: 50px;
+   *margin: 5px 5px 5px -90px;
+}
+
+.yui-carousel-vertical span.yui-carousel-first-button {
+    background-position: 0px -750px;
+}
+
+span.yui-carousel-first-button-disabled {
+    background-position: 0 -1950px;
+}
+
+.yui-carousel-vertical span.yui-carousel-first-button-disabled {
+    background-position: 0 -2050px;
+}
+
+.yui-carousel-nav ul {
+    float: right;
+    height: 19px;
+    margin: 0;
+    margin-left: -220px;
+    margin-right: 100px;
+   *margin-left: -160px;
+   *margin-right: 0;
+    padding: 0;
+}
+
+.yui-carousel-min-width .yui-carousel-nav ul {
+    *margin-left: -170px;
+}
+
+.yui-carousel-nav select {
+    position: relative;
+   *right: 50px;
+    top: 4px;
+}
+
+.yui-carousel-vertical .yui-carousel-nav ul,
+.yui-carousel-vertical .yui-carousel-nav select {
+    float: none;
+    margin: 0;
+   *zoom: 1;
+}
+
+.yui-carousel-nav ul li {
+    background: url(../../../../assets/skins/sam/sprite.png) no-repeat 0 -650px;
+    cursor: pointer;
+    float: left;
+    height: 9px;
+    list-style: none;
+    margin: 10px 0 0 5px;
+    overflow: hidden;
+    padding: 0;
+    width: 9px;
+}
+
+.yui-carousel-nav ul:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.yui-carousel-nav ul li a {
+    left: -10000px;
+    position: absolute;
+}
+
+.yui-carousel-nav ul li.yui-carousel-nav-page-focus {
+    outline: 1px dotted #000;
+}
+
+.yui-carousel-nav ul li.yui-carousel-nav-page-selected {
+    background-position: 0 -700px;
+}
+
+.yui-carousel-item-loading {
+    background: url(ajax-loader.gif) no-repeat 50% 50%;
+    position: relative;
+    text-indent: -150px;
+}
+
+/*Copyright (c) 2008,Yahoo! Inc. All rights reserved.Code licensed under the BSD License:http://developer.yahoo.net/yui/license.txtversion:2.7.0*/.yui-calcontainer{position:relative;float:left;_overflow:hidden}
+.yui-calcontainer iframe{position:absolute;border:none;margin:0;padding:0;z-index:0;width:100%;height:100%;left:0px;top:0px}
+.yui-calcontainer iframe.fixedsize{width:50em;height:50em;top:-1px;left:-1px}
+.yui-calcontainer.multi .groupcal{z-index:1;float:left;position:relative}
+.yui-calcontainer .title{position:relative;z-index:1}
+.yui-calcontainer .close-icon{position:absolute;z-index:1;text-indent:-10000em;overflow:hidden}
+.yui-calendar{position:relative}
+.yui-calendar .calnavleft{position:absolute;z-index:1;text-indent:-10000em;overflow:hidden}
+.yui-calendar .calnavright{position:absolute;z-index:1;text-indent:-10000em;overflow:hidden}
+.yui-calendar .calheader{position:relative;width:100%;text-align:center}
+.yui-calcontainer .yui-cal-nav-mask{position:absolute;z-index:2;margin:0;padding:0;width:100%;height:100%;_width:0;_height:0;left:0;top:0;display:none}
+.yui-calcontainer .yui-cal-nav{position:absolute;z-index:3;top:0;display:none}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn{display:-moz-inline-box;display:inline-block}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button{display:block;*display:inline-block;*overflow:visible;border:none;background-color:transparent;cursor:pointer}
+.yui-calendar .calbody a:hover{background:inherit}
+p#clear{clear:left;padding-top:10px}
+.yui-calcontainer{background-color:#ffffff;border:1px solid #e9e8e3;padding:10px}
+.yui-calcontainer.multi{padding:0 5px 0 5px}
+.yui-calcontainer.multi .groupcal{background-color:transparent;border:none;padding:10px 5px 10px 5px;margin:0}
+.yui-calcontainer .title{background: #929292; border-bottom:1px solid #cccccc;font:100% sans-serif;color:#000;font-weight:bold;height:auto;padding:.4em;margin:0 -10px 10px -10px;top:0;left:0;text-align:left}
+.yui-calcontainer.multi .title{margin:0 -5px 0 -5px}
+.yui-calcontainer.withtitle{padding-top:0}
+.yui-calcontainer .calclose{position:absolute;top:5px;right:4px;z-index:6;height:9px;width:9px;margin:0px;overflow:hidden;text-indent:-10000em;overflow:hidden;background:transparent url(../Graphics/Main/dialogclose.gif) no-repeat;cursor:pointer;visibility:inherit}
+.yui-calendar{border-spacing:0;border-collapse:collapse;font:100% sans-serif;text-align:center;margin:0}
+.yui-calendar .calhead{background:transparent;border:none;vertical-align:middle;padding:0}
+.yui-calendar .calheader{background:transparent;font-weight:bold;padding:0 0 .6em 0;text-align:center}
+.yui-calendar .calheader img{border:none}
+.yui-calendar .calnavleft{background:url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) no-repeat 0 -450px;width:25px;height:15px;top:0;bottom:0;left:-10px;margin-left:.4em;cursor:pointer}
+.yui-calendar .calnavright{background:url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) no-repeat 0 -500px;width:25px;height:15px;top:0;bottom:0;right:-10px;margin-right:.4em;cursor:pointer}
+.yui-calendar .calweekdayrow{height:2em}
+.yui-calendar .calweekdayrow th{padding:0;border:none}
+.yui-calendar .calweekdaycell{color:#000;font-weight:bold;text-align:center;width:2em}
+.yui-calendar .calfoot{background-color:#f2f2f2}
+.yui-calendar .calrowhead,.yui-calendar .calrowfoot{color:#a6a6a6;font-size:85%;font-style:normal;font-weight:normal;border:none}
+.yui-calendar .calrowhead{text-align:right;padding:0 2px 0 0}
+.yui-calendar .calrowfoot{text-align:left;padding:0 0 0 2px}
+.yui-calendar td.calcell{border:1px solid #cccccc;background:#fff;padding:1px;height:1.6em;line-height:1.6em;text-align:center;white-space:nowrap}
+.yui-calendar td.calcell a,
+.yui-calendar td.calcell a:link{color:#0066cc;display:block;height:100%;text-decoration:none}
+.yui-calendar td.calcell.today{background-color:#000}
+#doc3 .yui-calendar td.calcell.today a,
+#doc3 .yui-calendar td.calcell.today a:link {background-color:#fff}
+.yui-calendar td.calcell.oom{background-color:#cccccc;color:#a6a6a6;cursor:default}
+.yui-calendar td.calcell.selected{background-color:#fff;color:#000}
+#doc3 .yui-calendar td.calcell.selected a,
+#doc3 .yui-calendar td.calcell.selected a:link {background-color:#b3d4ff;color:#000}
+.yui-calendar td.calcell.calcellhover{background-color:#426fd9;color:#fff;cursor:pointer}
+#doc3 .yui-calendar td.calcell.calcellhover a,
+#doc3 .yui-calendar td.calcell.calcellhover a:link {background-color:#426fd9;color:#fff}
+.yui-calendar td.calcell.previous{color:#e0e0e0}
+.yui-calendar td.calcell.restricted{text-decoration:line-through}
+.yui-calendar td.calcell.highlight1{background-color:#ccff99}
+.yui-calendar td.calcell.highlight2{background-color:#99ccff}
+.yui-calendar td.calcell.highlight3{background-color:#ffcccc}
+.yui-calendar td.calcell.highlight4{background-color:#ccff99}
+.yui-calendar a.calnav{border:1px solid #f2f2f2;padding:0 4px;text-decoration:none;color:#000;zoom:1}
+.yui-calendar a.calnav:hover{background:url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) repeat-x 0 0;border-color:#A0A0A0;cursor:pointer}
+.yui-calcontainer .yui-cal-nav-mask{background-color:#000;opacity:0.25;*filter:alpha(opacity=25)}
+.yui-calcontainer .yui-cal-nav{font-family:arial,helvetica,clean,sans-serif;font-size:93%;border:1px solid #808080;left:50%;margin-left:-7em;width:14em;padding:0;top:2.5em;background-color:#f2f2f2}
+.yui-calcontainer.withtitle .yui-cal-nav{top:4.5em}
+.yui-calcontainer.multi .yui-cal-nav{width:16em;margin-left:-8em}
+.yui-calcontainer .yui-cal-nav-y,.yui-calcontainer .yui-cal-nav-m,.yui-calcontainer .yui-cal-nav-b{padding:5px 10px 5px 10px}
+.yui-calcontainer .yui-cal-nav-b{text-align:center}
+.yui-calcontainer .yui-cal-nav-e{margin-top:5px;padding:5px;background-color:#EDF5FF;border-top:1px solid black;display:none}
+.yui-calcontainer .yui-cal-nav label{display:block;font-weight:bold}
+.yui-calcontainer .yui-cal-nav-mc{width:100%;_width:auto}
+.yui-calcontainer .yui-cal-nav-y input.yui-invalid{background-color:#FFEE69;border:1px solid #000}
+.yui-calcontainer .yui-cal-nav-yc{width:4em}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn{border:1px solid #808080;background:url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) repeat-x 0 0;background-color:#ccc;margin:auto .15em}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button{padding:0 8px;font-size:93%;line-height:2;*line-height:1.7;min-height:2em;*min-height:auto;color:#000}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default{border:1px solid #304369;background-color:#426fd9;background:url(/UI/Common/Javascript/yui/2.7.0/assets/skins/sam/sprite.png) repeat-x 0 -1400px}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default button{color:#fff}
+.yui-calcontainer th.calweekdaycell{background:#ffffff}
+.yui-calcontainer.multi{padding:0 .45em}
+.yui-calcontainer.multi .groupcal{background-color:transparent;border:none;padding:.91em .45em;margin:0}
+.yui-calcontainer .title{border-bottom:1px solid #ffffff;font:100% sans-serif;color:#ffffff;font-weight:bold;height:auto;padding:.4em;margin:0 -.91em .91em -.91em;top:0;left:0;text-align:left}
+.yui-calcontainer.multi .title{margin:0 -.45em}
+.yui-calcontainer.withtitle{padding-top:0}
+.yui-calendar{border-spacing:0;border-collapse:collapse;font:100% sans-serif;text-align:center;margin:0}
+.yui-calendar .calhead{background:transparent;border:none;vertical-align:middle;padding:0}
+.yui-calendar .calheader{background:#ffffff;font-weight:bold;padding:0 0 .6em 0;text-align:center;font-size:1em}
+.yui-calendar .calheader img{border:none}
+.yui-calendar .calnavleft{width:25px;height:15px;top:0;bottom:0;left:-10px;margin-left:.4em;cursor:pointer}
+.yui-calendar .calnavright{width:25px;height:15px;top:0;bottom:0;right:-10px;margin-right:.4em;cursor:pointer}
+.yui-calendar .calweekdayrow{height:2em}
+.yui-calendar .calweekdayrow th{padding:0;border:none}
+.yui-calendar .calweekdaycell{color:#000;font-weight:bold;text-align:center;width:2em}
+.yui-calendar .calfoot{background-color:#ffffff}
+.yui-calendar .calrowhead,.yui-calendar .calrowfoot{color:#a6a6a6;font-size:85%;font-style:normal;font-weight:normal;border:none}
+.yui-calendar .calrowhead{text-align:right;padding:0 2px 0 0}
+.yui-calendar .calrowfoot{text-align:left;padding:0 0 0 2px}
+.yui-calendar td.calcell{border:1px solid #ebeae9;background:#fff;padding:1px;height:1.6em;line-height:1.6em;text-align:center;white-space:nowrap}
+.yui-calendar td.calcell a{color:#405ebe;display:block;height:100%;text-decoration:none}
+.yui-calendar td.calcell.today{background-color:#405ebe}
+.yui-calendar td.calcell.today a{background-color:#fff}
+.yui-calendar td.calcell.oom{background-color:#cccccc;color:#a6a6a6;cursor:default}
+.yui-calendar td.calcell.selected{background-color:#fff;color:#000}
+.yui-calendar td.calcell.selected a{background-color:#b3d4ff;color:#000}
+.yui-calendar td.calcell.calcellhover{background-color:#ffffff;color:#fff;cursor:pointer}
+.yui-calendar td.calcell.calcellhover a{background-color:#405ebe;color:#fff}
+.yui-calendar td.calcell.previous{color:#e0e0e0}
+.yui-calendar td.calcell.restricted{text-decoration:line-through}
+.yui-calendar td.calcell.highlight1{background-color:#ccff99}
+.yui-calendar td.calcell.highlight2{background-color:#99ccff}
+.yui-calendar td.calcell.highlight3{background-color:#ffcccc}
+.yui-calendar td.calcell.highlight4{background-color:#ccff99}
+.yui-calendar a.calnav{border:1px solid #ffffff;padding:0 4px;text-decoration:none;color:#000;zoom:1}
+.yui-calendar a.calnav:hover{border-color:#A0A0A0;cursor:pointer}
+.yui-calcontainer .yui-cal-nav-mask{background-color:#000;opacity:0.25;*filter:alpha(opacity=25)}
+.yui-calcontainer .yui-cal-nav{font-family:verdana,arial,helvetica,clean,sans-serif;font-size:93%;border:1px solid #808080;left:50%;margin-left:-7em;width:14em;padding:0;top:2.5em;background-color:#ffffff}
+.yui-calcontainer.withtitle .yui-cal-nav{top:4.5em}
+.yui-calcontainer.multi .yui-cal-nav{width:16em;margin-left:-8em}
+.yui-calcontainer .yui-cal-nav-y,.yui-calcontainer .yui-cal-nav-m,.yui-calcontainer .yui-cal-nav-b{padding:.45em .91em}
+.yui-calcontainer .yui-cal-nav-b{text-align:center}
+.yui-calcontainer .yui-cal-nav-e{margin-top:.45em;padding:.45em;background-color:#EDF5FF;border-top:1px solid black;display:none}
+.yui-calcontainer .yui-cal-nav label{display:block;font-weight:bold}
+.yui-calcontainer .yui-cal-nav-mc{width:100%;_width:auto}
+.yui-calcontainer .yui-cal-nav-y input.yui-invalid{background-color:#FFEE69;border:1px solid #000}
+.yui-calcontainer .yui-cal-nav-yc{width:4em}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn{border:1px solid #808080;background-color:#ffffff;margin:auto .15em}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button{padding:0 8px;font-size:93%;line-height:2;*line-height:1.7;min-height:2em;*min-height:auto;color:#000}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default{border:1px solid #304369;background-color:#426fd9}
+.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default button{color:#fff}

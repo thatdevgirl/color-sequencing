@@ -1,0 +1,64 @@
+/* -- Base Styles -- */
+
+h1 { font-size: 1.8em; font-weight: bold; margin: 1em 0.65em; padding: 0; }
+
+p { font-size: 1.1em; ine-height: 1.25em; margin: 1em; padding: 0; }
+
+a { color: #A00; text-decoration: underline; }
+
+a:hover { text-decoration: none; }
+
+.hidden { visibility: hidden; }
+
+strong { font-weight: bold; }
+
+
+/* -- YUI Panel Styles -- */
+
+.yui-panel .hd,
+.yui-panel .bd { font-size: 1.1em; }
+
+.yui-panel .bd p        { clear: both; font-size: 1em; line-height: 1em; margin: 0 0 0.5em 0; }
+.yui-panel .bd strong { display: block; float: left; width: 12em; }
+
+
+/* -- Colorway Dialog Styles -- */
+
+#colorway-control-panel { background: #DDD; height: 1.5em; margin: 1.5em 0; padding: 0.75em; width: 98%; }
+
+
+/* -- Colorway Main Container -- */
+
+#colorway-main-container { background: #FFF; border: 1px solid #000; max-height: 35em; overflow-y: scroll; }
+
+#colorway-main-container div.colorway { border: 2px solid #FFF; cursor: move; display: block; float: left; height: 8em; margin: 1px; overflow: hidden; padding: 5px; width: 12em; }
+
+.yui-panel .container-close { background: url("../images/dialogclose.gif"); }
+
+
+/* -- Styles for dragged colorway items -- */
+
+.selected { border: 2px solid #00CAED !important; }
+
+#colorway-main-container div.colorway.grey {
+	  -khtml-opacity: 0.25 !important;
+	    -moz-opacity: 0.25 !important;
+    	    -o-opacity: 0.25 !important;
+	-webkit-opacity: 0.25 !important;
+	           opacity: 0.25 !important;
+}
+
+
+/* -- FOR EXAMPLE CONTENT BLOCKS -- */
+/* -- Colorway colors -- */
+
+.d01 { background: #f44; }   .d02 { background: #4f4; }   .d03 { background: #44f; }
+.d04 { background: #ff4; }    .d05 { background: #4ff; }    .d06 { background: #d99; }
+.d07 { background: #9d9; }  .d08 { background: #99d; }  .d09 { background: #dd9; }
+.d10 { background: #9dd; }  .d11 { background: #b88; }  .d12 { background: #8b8; }
+.d13 { background: #88b; }  .d14 { background: #bb8; }  .d15 { background: #8bb; }
+.d16 { background: #a22; }  .d17 { background: #2a2; }  .d18 { background: #22a; }
+.d19 { background: #aa2; }  .d20 { background: #2aa; }  .d21 { background: #c00; }
+.d22 { background: #0c0; }  .d23 { background: #00c; }  .d24 { background: #cc0; }
+.d25 { background: #00c; }  .d26 { background: #e77; }  .d27 { background: #7e7; }
+.d28 { background: #77e; }  .d29 { background: #ee7; }  .d30 { background: #7ee; }
